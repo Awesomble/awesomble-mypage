@@ -7,10 +7,10 @@ export function getServerSideProps() {
   const renderedAt = new Date();
   const formattedBuildDate = renderedAt.toLocaleDateString("en-US", {
     dateStyle: "long",
-  });
+  })
   const formattedBuildTime = renderedAt.toLocaleTimeString("en-US", {
     timeStyle: "long",
-  });
+  })
   return {
     props: {
       renderedAt: `${formattedBuildDate} at ${formattedBuildTime}`,
